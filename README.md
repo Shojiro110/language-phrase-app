@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# language-phrase-app（言語フレーズ学習アプリ）
 
-## Getting Started
+単語・フレーズを「暗記カード（フラッシュカード）」で覚え、学習の進み具合を記録・可視化する Web アプリです。
+自分自身の語学学習のために作った実用アプリであり、開発の練習・ポートフォリオを兼ねています。
 
-First, run the development server:
+## 主な機能
+
+### MVP（最初に作る範囲）
+- カードの追加・一覧表示・編集・削除（表＝単語/フレーズ、裏＝意味）
+- 学習モード：カードの表を見て、クリックで裏返して答え合わせ
+- 「覚えた / まだ」を記録
+- データを保存し、リロードしても消えない
+
+### 進捗管理（このアプリの目玉）
+- 覚えたカード数 / 全カード数（例: 12/30）
+- 学習した日付の記録
+- 達成率の可視化（進捗バーなど）
+
+## 技術スタック
+
+| 役割 | 採用技術 |
+|------|----------|
+| フレームワーク | Next.js (App Router) |
+| 言語 | JavaScript |
+| データ保存 | Supabase（予定） |
+| バージョン管理 | GitHub |
+| 公開（デプロイ） | Vercel（予定） |
+
+## 開発の始め方
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install      # 初回のみ：必要な部品をインストール
+npm run dev      # 開発サーバーを起動
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開くと表示されます。
+`app/page.js` を編集すると、保存と同時に画面が自動更新されます。
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 現在の状況
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js の雛形を作成し、GitHub に公開したばかりの初期段階です。
+- これから上記 MVP の画面と機能を順に実装していきます。
 
-## Learn More
+## 制作メモ
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+開発未経験からの学習記録として、進捗や設計の判断を `docs/` に残しながら進めています。
